@@ -18,11 +18,17 @@ namespace C_.netprac
             Console.WriteLine("Enter Your Age");
             int UserAge = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Enter Your Mail");
+            string UserMail = Console.ReadLine();
+
+            Console.WriteLine("Enter Your Address");
+            String UserAddress = Console.ReadLine();
+
             Console.WriteLine("***Ans***");
-            Console.WriteLine("User Name is ");
-            Console.WriteLine(UserName);
-            Console.WriteLine("User Age is ");
-            Console.WriteLine(UserAge);
+            Console.WriteLine("User Name is "+ UserName);
+            Console.WriteLine("User Age is "+ UserAge);
+            Console.WriteLine("User Mail is " + UserMail);
+            Console.WriteLine("User Address is"+ UserAddress);
             Console.ReadLine();
 
 
