@@ -136,6 +136,22 @@ namespace C_.netprac
                     Console.WriteLine("Dear User You Entered a Wrong Number Please Select From The Menu");
                 break;
             }
+//            for(int i = 0; i <= 4; i++)
+//            {
+//                for (int j = 0; j <= i; j++)
+//                {
+//                    Console.Write("*");
+//                }
+//                Console.WriteLine();
+//            }
+//            for(int i = 3; i >= 0; i--)
+//{
+//                for (int j = 0; j <= i; j++)
+//                {
+//                    Console.Write("*");
+//                }
+//                Console.WriteLine();
+//            }
             Console.ReadLine();
 
         }
