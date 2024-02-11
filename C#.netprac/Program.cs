@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,15 +40,36 @@ namespace C_.netprac
             Console.WriteLine("*****" + "Welcome To Our Aptech Organization Restaurant" + "*****");
             Console.WriteLine("**************************************************************");
             Console.WriteLine("Restaurant Menu is :");
-            string[] Menu = { "MuttonBiryani", "ZingerBurger", "Broast", "MuttonRoast", "ChickenChargha", "SpecialAptechShawarma", "OkhaiDaalChawal", "MuttonPulao", "LavaPizzaSpecial" };
+            Console.WriteLine();
+            string[] Menu = { 
+                             "MuttonBiryani",
+                             "ZingerBurger",
+                             "Broast",
+                             "MuttonRoast",
+                             "ChickenChargha",
+                             "SpecialAptechShawarma",
+                             "OkhaiDaalChawal",
+                             "MuttonPulao",
+                             "LavaPizzaSpecial" };
             int[] Price = { 300 , 150 , 200 , 500 , 450 , 300 , 100 , 300 , 600 };
-            int[] discount = {20};
-            string[] DiscountedPrice = { $"{Price[0] - discount[0]}",$"{Price[1] - discount[0]}",$"{Price[2] - discount[0]}",$"{Price[3] - discount[0]}",$"{Price[4] - discount[0]}",$"{Price[5] - discount[0]}",$"{Price[6] - discount[0]}",$"{Price[7] - discount[0]}",$"{Price[8] - discount[0]}" };
-            for (int i = 0; i < Menu.Length; i++)
+            var discount = 20;
+            var Note = " Congratulation Your Order was Dispatch, Order Discount When You Order From Application Rupees 20 Your bill is : ";
+            string[] OriginalPrice = { 
+                                       Note + $"\u001b[1m{Price[0] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[1] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[2] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[3] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[4] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[5] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[6] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[7] - discount}\u001b[0m",
+                                       Note + $"\u001b[1m{Price[8] - discount}\u001b[0m" };
+            for(int i = 0; i < Menu.Length; i++)
             {
                 Console.WriteLine($"{i + 1}. {Menu[i]}. {Price[i]}");
             }
-            Console.WriteLine("Enter What Will You Eat From Menu's Serial Number");
+            Console.WriteLine("Enter What Will You Order From Menu, Order Using Serial Numbers");
+            Console.WriteLine();
             int usereat = int.Parse(Console.ReadLine());
             switch(usereat)
             {
@@ -56,8 +78,8 @@ namespace C_.netprac
                     switch (1)
                     {
                         case 1:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[0]}");
-                    break;
+                            Console.WriteLine($"{OriginalPrice[0]}");
+                        break;
                     }
                 break;
                 case 2:
@@ -65,7 +87,7 @@ namespace C_.netprac
                     switch (2)
                     {
                         case 2:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[1]}");
+                            Console.WriteLine($"{OriginalPrice[1]}");
                         break;
                     }
                 break;
@@ -74,7 +96,7 @@ namespace C_.netprac
                     switch (3)
                     {
                         case 3:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[2]}");
+                            Console.WriteLine($"{OriginalPrice[2]}");
                         break;
                     }
                 break;
@@ -83,7 +105,7 @@ namespace C_.netprac
                     switch (4)
                     {
                         case 4:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[3]}");
+                            Console.WriteLine($"{OriginalPrice[3]}");
                         break;
                     }
                 break;
@@ -92,7 +114,7 @@ namespace C_.netprac
                     switch (5)
                     {
                         case 5:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[4]}");
+                            Console.WriteLine($"{OriginalPrice[4]}");
                         break;
                     }
                 break;
@@ -101,7 +123,7 @@ namespace C_.netprac
                     switch (6)
                     {
                         case 6:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[5]}");
+                            Console.WriteLine($"{OriginalPrice[5]}");
                         break;
                     }
                 break;
@@ -110,7 +132,7 @@ namespace C_.netprac
                     switch (7)
                     {
                         case 7:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[6]}");
+                            Console.WriteLine($"{OriginalPrice[6]}");
                         break;
                     }
                 break;
@@ -119,7 +141,7 @@ namespace C_.netprac
                     switch (8)
                     {
                         case 8:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[7]}");
+                            Console.WriteLine($"{OriginalPrice[7]}");
                         break;
                     }
                 break;
@@ -128,7 +150,7 @@ namespace C_.netprac
                     switch (9)
                     {
                         case 9:
-                            Console.WriteLine($" Congratulation Your First Order Dispatched First Order Discount Rupees 20 Your bill is : {DiscountedPrice[8]}");
+                            Console.WriteLine($"{OriginalPrice[8]}");
                         break;
                     }
                 break;
@@ -145,7 +167,7 @@ namespace C_.netprac
 //                Console.WriteLine();
 //            }
 //            for(int i = 3; i >= 0; i--)
-//{
+//            {
 //                for (int j = 0; j <= i; j++)
 //                {
 //                    Console.Write("*");
