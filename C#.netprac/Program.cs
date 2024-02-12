@@ -51,7 +51,7 @@ namespace C_.netprac
                              "OkhaiDaalChawal",
                              "MuttonPulao",
                              "LavaPizzaSpecial" };
-            int[] Price = { 300 , 150 , 200 , 500 , 450 , 300 , 100 , 300 , 600 };
+            int[] Price = { 300 , 150 , 200 , 500 , 450 , 300 , 100 , 300 , 600 };      
             var discount = 20;
             var Note = " Congratulation Your Order was Dispatch, Order Discount When You Order From Application Rupees 20 Your bill is : ";
             string[] OriginalPrice = { 
@@ -115,7 +115,8 @@ namespace C_.netprac
                     {
                         case 5:
                             Console.WriteLine($"{OriginalPrice[4]}");
-                        break;
+                
+                            break;
                     }
                 break;
                 case 6:
